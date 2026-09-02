@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-content-primary font-sans antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-accent-hover;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-md;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-border-hover;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+}
