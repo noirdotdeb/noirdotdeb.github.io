@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
 
 function App() {
@@ -8,9 +9,8 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        {/* Placeholder sections for future tasks */}
+        <Projects />
         <section id="about" className="min-h-[60vh]" />
-        <section id="projects" className="min-h-[60vh]" />
         <section id="stack" className="min-h-[60vh]" />
         <section id="contact" className="min-h-[60vh]" />
       </main>
