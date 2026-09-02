@@ -18,26 +18,17 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-content mx-auto w-full relative">
-        {/* Terminal-style path indicator */}
-        <div className="flex items-center gap-2 mb-8 animate-fade-in opacity-0" style={{ animationDelay: '0ms' }}>
-          <span className="w-2 h-2 rounded-full bg-accent/60" />
-          <span className="font-mono text-xs text-content-faint">
-            <span className="text-accent-muted">~/</span>portfolio
-            <span className="text-content-faint">/</span>home
-          </span>
-        </div>
-
         {/* Status badge */}
         <div
           className="inline-flex items-center gap-2 mb-8 animate-fade-in opacity-0"
-          style={{ animationDelay: '100ms' }}
+          style={{ animationDelay: '0ms' }}
         >
           <span className="relative flex w-2 h-2">
             <span className="absolute inline-flex w-full h-full rounded-full bg-accent/40 animate-ping" />
             <span className="relative inline-flex w-2 h-2 rounded-full bg-accent" />
           </span>
-          <span className="font-mono text-xs text-content-muted">
-            available for opportunities
+          <span className="text-sm text-content-muted">
+            Available for opportunities
           </span>
         </div>
 
@@ -74,22 +65,22 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="font-mono text-sm px-5 py-2.5 rounded-md bg-accent text-bg font-medium transition-colors duration-200 hover:bg-accent-hover"
+            className="text-sm px-5 py-2.5 rounded-md bg-accent text-bg font-medium transition-colors duration-200 hover:bg-accent-hover"
           >
-            view_projects()
+            View Projects
           </a>
           <a
             href="#contact"
-            className="font-mono text-sm px-5 py-2.5 rounded-md border border-border text-content-muted transition-colors duration-200 hover:border-border-hover hover:text-content-primary"
+            className="text-sm px-5 py-2.5 rounded-md border border-border text-content-muted transition-colors duration-200 hover:border-border-hover hover:text-content-primary"
           >
-            get_in_touch()
+            Get in Touch
           </a>
         </div>
       </div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in opacity-0" style={{ animationDelay: '700ms' }}>
-        <span className="font-mono text-[10px] text-content-faint uppercase tracking-widest">
+        <span className="text-[10px] text-content-faint uppercase tracking-widest">
           scroll
         </span>
         <div className="w-px h-8 bg-gradient-to-b from-border-hover to-transparent" />

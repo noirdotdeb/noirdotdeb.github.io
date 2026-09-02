@@ -45,12 +45,9 @@ export default function Navbar() {
     >
       <nav className="max-w-content mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / name mark */}
-        <a href="#top" className="group flex items-center gap-2.5">
-          <span className="font-mono text-sm text-accent border border-accent/40 rounded-md px-2 py-0.5 transition-colors duration-200 group-hover:bg-accent/10 group-hover:border-accent/60">
-            asa
-          </span>
-          <span className="font-mono text-xs text-content-faint hidden sm:inline">
-            ~/ali-saad-attique
+        <a href="#top" className="group flex items-center">
+          <span className="text-base font-semibold tracking-tight text-content-primary transition-colors duration-200 group-hover:text-accent">
+            Ali.
           </span>
         </a>
 
@@ -60,14 +57,13 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className={`font-mono text-xs px-3 py-2 rounded-md transition-colors duration-200 ${
+              className={`text-sm px-3 py-2 rounded-md transition-colors duration-200 ${
                 activeSection === link.href.slice(1)
                   ? 'text-accent'
                   : 'text-content-muted hover:text-content-primary'
               }`}
             >
-              <span className="text-content-faint mr-1">/</span>
-              {link.label.toLowerCase()}
+              {link.label}
             </a>
           ))}
         </div>
@@ -100,10 +96,9 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-mono text-sm px-3 py-2.5 rounded-md text-content-muted hover:text-content-primary hover:bg-bg-surface transition-colors"
+                className="text-base px-3 py-2.5 rounded-md text-content-muted hover:text-content-primary hover:bg-bg-surface transition-colors"
               >
-                <span className="text-content-faint mr-1.5">/</span>
-                {link.label.toLowerCase()}
+                {link.label}
               </a>
             ))}
           </div>
