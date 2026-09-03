@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="min-h-screen flex items-center justify-center relative px-6 pt-16"
+      className="flex items-center justify-center relative px-6 pt-32 pb-24"
     >
       {/* Subtle grid backdrop */}
       <div
@@ -40,14 +40,12 @@ export default function Hero() {
           Ali Saad Attique
         </h1>
 
-        {/* Subtitle */}
+        {/* Tagline */}
         <p
-          className="text-xl sm:text-2xl text-content-muted font-medium mb-8 animate-fade-in-up opacity-0"
+          className="text-xl sm:text-2xl text-content-muted font-medium mb-6 animate-fade-in-up opacity-0"
           style={{ animationDelay: '300ms' }}
         >
-          Software Engineering Student{' '}
-          <span className="text-content-faint mx-1">&</span>{' '}
-          <span className="text-accent">Web Developer</span>
+          Software Developer.
         </p>
 
         {/* Bio */}
@@ -55,7 +53,8 @@ export default function Hero() {
           className="text-lg text-content-muted max-w-xl leading-relaxed mb-10 animate-fade-in-up opacity-0"
           style={{ animationDelay: '400ms' }}
         >
-          Building things, Breaking things, Understanding why.
+          Focused on modern web development, full-stack architecture, and
+          practical software engineering.
         </p>
 
         {/* CTA buttons */}
@@ -76,14 +75,6 @@ export default function Hero() {
             Get in Touch
           </a>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in opacity-0" style={{ animationDelay: '700ms' }}>
-        <span className="text-[10px] text-content-faint uppercase tracking-widest">
-          scroll
-        </span>
-        <div className="w-px h-8 bg-gradient-to-b from-border-hover to-transparent" />
       </div>
     </section>
   );
