@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import GithubProjects from '@/components/GithubProjects';
+import Connect from '@/components/Connect';
 import Footer from '@/components/Footer';
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
         <GithubProjects />
         <section id="about" className="min-h-[60vh]" />
         <section id="stack" className="min-h-[60vh]" />
-        <section id="contact" className="min-h-[60vh]" />
+        <Connect />
       </main>
       <Footer />
     </div>
