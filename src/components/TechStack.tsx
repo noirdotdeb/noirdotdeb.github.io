@@ -32,22 +32,25 @@ export default function TechStack() {
           The tools and technologies I work with.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {CATEGORIES.map((cat) => (
-            <div key={cat.label}>
-              <h3 className="text-xs font-mono uppercase tracking-widest text-content-faint mb-3">
+            <div
+              key={cat.label}
+              className="border border-zinc-800 rounded-xl p-5 bg-black/50"
+            >
+              <h3 className="text-xs text-zinc-500 uppercase tracking-widest font-semibold mb-4">
                 {cat.label}
               </h3>
-              <ul className="flex flex-wrap gap-x-3 gap-y-1.5">
+              <div className="flex flex-wrap gap-2">
                 {cat.items.map((item) => (
-                  <li
+                  <span
                     key={item}
-                    className="text-sm text-content-muted"
+                    className="px-3 py-1.5 bg-zinc-900 border border-zinc-800/50 rounded-md text-sm text-zinc-300 font-mono"
                   >
                     {item}
-                  </li>
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
