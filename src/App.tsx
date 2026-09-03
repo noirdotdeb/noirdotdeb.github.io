@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Projects from '@/components/Projects';
+import GithubProjects from '@/components/GithubProjects';
 import Footer from '@/components/Footer';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <Projects />
+        <GithubProjects />
         <section id="about" className="min-h-[60vh]" />
         <section id="stack" className="min-h-[60vh]" />
         <section id="contact" className="min-h-[60vh]" />
