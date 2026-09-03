@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Logo / name mark */}
         <a href="#top" className="group flex items-center">
           <span className="text-base font-semibold tracking-tight text-content-primary transition-colors duration-200 group-hover:text-accent">
-            Ali.
+            Saad.
           </span>
         </a>
 
