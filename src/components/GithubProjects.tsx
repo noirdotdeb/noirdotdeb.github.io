@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, Star, GitFork } from 'lucide-react';
+import { ArrowUpRight, Star } from 'lucide-react';
 
 interface GitHubRepo {
   id: number;
@@ -17,7 +17,6 @@ type Status = 'loading' | 'success' | 'error';
 export default function GithubProjects() {
   const [repos, setRepos] = useState<GitHubRepo[]>([]);
   const [status, setStatus] = useState<Status>('loading');
-  const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
     let cancelled = false;
@@ -36,9 +35,8 @@ export default function GithubProjects() {
           .slice(0, 6);
         setRepos(filtered);
         setStatus('success');
-      } catch (e) {
+      } catch {
         if (cancelled) return;
-        setErrorMsg(e instanceof Error ? e.message : 'Something went wrong');
         setStatus('error');
       }
     })();
@@ -91,14 +89,9 @@ export default function GithubProjects() {
                 key={repo.id}
                 className="bg-black border border-zinc-800 rounded-lg p-6 transition-colors duration-200 hover:border-zinc-600 flex flex-col"
               >
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <h3 className="text-lg font-semibold text-content-primary break-words">
-                    {repo.name}
-                  </h3>
-                  {repo.fork && (
-                    <GitFork className="w-4 h-4 text-content-faint shrink-0 mt-1" />
-                  )}
-                </div>
+                <h3 className="text-lg font-semibold text-content-primary break-words mb-2">
+                  {repo.name}
+                </h3>
 
                 <p className="text-sm text-content-muted leading-relaxed mb-4 flex-1">
                   {repo.description ?? 'No description provided.'}
