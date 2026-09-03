@@ -21,9 +21,11 @@ Personal developer portfolio showcasing production projects, technical architect
 To run this project locally for development or testing:
 
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/noirdotdeb/noirdotdeb.github.io.git](https://github.com/noirdotdeb/noirdotdeb.github.io.git)
+
+```bash
+ git clone [https://github.com/noirdotdeb/noirdotdeb.github.io.git](https://github.com/noirdotdeb/noirdotdeb.github.io.git)
    cd noirdotdeb.github.io
+
 
 ```
 

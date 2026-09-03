@@ -6,6 +6,7 @@ interface GitHubRepo {
   name: string;
   description: string | null;
   html_url: string;
+  homepage: string | null;
   language: string | null;
   stargazers_count: number;
   fork: boolean;
@@ -111,14 +112,28 @@ export default function GithubProjects() {
                   )}
                 </div>
 
-                <a
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 text-sm text-accent transition-colors duration-200 hover:text-accent-hover"
-                >
-                  View Code <ArrowUpRight className="w-4 h-4" />
-                </a>
+                {/* Updated Link Section */}
+                <div className="flex items-center gap-6 mt-auto">
+                  <a
+                    href={repo.html_url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 text-sm text-accent transition-colors duration-200 hover:text-accent-hover"
+                  >
+                    View Code <ArrowUpRight className="w-4 h-4" />
+                  </a>
+                  
+                  {repo.homepage && repo.homepage.trim() !== '' && (
+                    <a
+                      href={repo.homepage}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="inline-flex items-center gap-1.5 text-sm text-accent transition-colors duration-200 hover:text-accent-hover"
+                    >
+                      Live Demo <ArrowUpRight className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
               </article>
             ))}
           </div>
